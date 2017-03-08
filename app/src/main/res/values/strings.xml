@@ -1,4 +1,10 @@
 <resources>
     <string name="app_name">OkSocios</string>
     <string name="title_activity_borrar">BorrarActivity</string>
+    <string name="login_form_username">Usuario</string>
+    <string name="login_form_password">Clave</string>
+    <string name="login_chb">Recordarme!</string>
+    <string name="login_btn_login">Ingresar</string>
+    <string name="login_signIn">Registrarme!</string>
+    <string name="login_forgotPass">Olvidó Clave?</string>
 </resources>
