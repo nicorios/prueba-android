@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">OkSocios</string>
+    <string name="title_activity_borrar">BorrarActivity</string>
 </resources>
