@@ -7,4 +7,7 @@
     <string name="login_btn_login">Ingresar</string>
     <string name="login_signIn">Registrarme!</string>
     <string name="login_forgotPass">Olvidó Clave?</string>
+    <string name="title_activity_container">OkSocios</string>
+    <string name="action_settings">Settings</string>
+    <string name="section_format">Hello World from section: %1$d</string>
 </resources>
