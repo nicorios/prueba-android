@@ -8,6 +8,6 @@
     <string name="login_signIn">Registrarme!</string>
     <string name="login_forgotPass">Olvidó Clave?</string>
     <string name="title_activity_container">Principal</string>
-    <string name="action_settings">Settings</string>
+    <string name="action_settings">Ajustes</string>
     <string name="section_format">Hello World from section: %1$d</string>
 </resources>

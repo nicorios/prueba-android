@@ -1,8 +1,10 @@
 package com.oksocios.oksocios;
 
+import android.graphics.PorterDuff;
 import android.support.design.widget.TabLayout;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
+import android.support.v4.content.ContextCompat;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
@@ -19,6 +21,7 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class ContainerActivity extends AppCompatActivity {
 
@@ -59,6 +62,46 @@ public class ContainerActivity extends AppCompatActivity {
 
         TabLayout tabLayout = (TabLayout) findViewById(R.id.tabs);
         tabLayout.setupWithViewPager(mViewPager);
+
+        //Seting icons
+        tabLayout.getTabAt(0).setIcon(R.drawable.icon_home_white);
+        tabLayout.getTabAt(1).setIcon(R.drawable.icon_users_grey);
+        tabLayout.getTabAt(2).setIcon(R.drawable.icon_chart_grey);
+
+        tabLayout.addOnTabSelectedListener(new TabLayout.OnTabSelectedListener(){
+
+            @Override
+            public void onTabSelected(TabLayout.Tab tab) {
+                int position = tab.getPosition();
+                switch(position){
+                    case 0: tab.setIcon(R.drawable.icon_home_white);
+                            break;
+                    case 1: tab.setIcon(R.drawable.icon_users_white);
+                            break;
+                    case 2: tab.setIcon(R.drawable.icon_chart_white);
+                            break;
+                }
+
+            }
+
+            @Override
+            public void onTabUnselected(TabLayout.Tab tab) {
+                int position = tab.getPosition();
+                switch(position){
+                    case 0: tab.setIcon(R.drawable.icon_home_grey);
+                        break;
+                    case 1: tab.setIcon(R.drawable.icon_users_grey);
+                        break;
+                    case 2: tab.setIcon(R.drawable.icon_chart_grey);
+                        break;
+                }
+            }
+
+            @Override
+            public void onTabReselected(TabLayout.Tab tab) {
+                Toast.makeText(getApplicationContext(),"Reselected",Toast.LENGTH_SHORT).show();
+            }
+        });
 
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
@@ -156,11 +199,11 @@ public class ContainerActivity extends AppCompatActivity {
         public CharSequence getPageTitle(int position) {
             switch (position) {
                 case 0:
-                    return "Principal";
+                    return null;
                 case 1:
-                    return "Socios";
+                    return null;
                 case 2:
-                    return "Estadisticas";
+                    return null;
             }
             return null;
         }
