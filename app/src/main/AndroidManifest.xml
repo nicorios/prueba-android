@@ -18,7 +18,14 @@
         <activity
             android:name=".ContainerActivity"
             android:label="@string/title_activity_container"
-            android:theme="@style/AppTheme"></activity>
+            android:theme="@style/AppTheme"
+            android:parentActivityName="com.oksocios.oksocios.LoginActivity" >
+
+            <!-- Parent activity meta-data to support 4.0 and lower -->
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.oksocios.oksocios.LoginActivity" />
+        </activity>
     </application>
 
 </manifest>
