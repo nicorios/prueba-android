@@ -7,7 +7,10 @@
     <string name="login_btn_login">Ingresar</string>
     <string name="login_signIn">Registrarme!</string>
     <string name="login_forgotPass">Olvidó Clave?</string>
-    <string name="title_activity_container">Principal</string>
+    <string name="title_activity_container">Ingresos</string>
     <string name="action_settings">Ajustes</string>
     <string name="section_format">Hello World from section: %1$d</string>
+    <string name="actionBarTitle_arrives">Ingresos</string>
+    <string name="actionBarTitle_stats">Estadísticas</string>
+    <string name="actionBarTitle_clients">Socios</string>
 </resources>

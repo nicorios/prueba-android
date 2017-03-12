@@ -48,7 +48,8 @@ public class ContainerActivity extends AppCompatActivity {
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         // Get a support ActionBar corresponding to this toolbar
-        ActionBar ab = getSupportActionBar();
+        // Lo hicimos "final" para poder setear el titulo de la tab.
+        final ActionBar ab = getSupportActionBar();
 
         // Enable the Up button
         ab.setDisplayHomeAsUpEnabled(true);
@@ -60,7 +61,7 @@ public class ContainerActivity extends AppCompatActivity {
         mViewPager = (ViewPager) findViewById(R.id.container);
         mViewPager.setAdapter(mSectionsPagerAdapter);
 
-        TabLayout tabLayout = (TabLayout) findViewById(R.id.tabs);
+        final TabLayout tabLayout = (TabLayout) findViewById(R.id.tabs);
         tabLayout.setupWithViewPager(mViewPager);
 
         //Seting icons
@@ -75,10 +76,13 @@ public class ContainerActivity extends AppCompatActivity {
                 int position = tab.getPosition();
                 switch(position){
                     case 0: tab.setIcon(R.drawable.icon_home_white);
+                            ab.setTitle(R.string.actionBarTitle_arrives);
                             break;
                     case 1: tab.setIcon(R.drawable.icon_users_white);
+                            ab.setTitle(R.string.actionBarTitle_clients);
                             break;
                     case 2: tab.setIcon(R.drawable.icon_chart_white);
+                            ab.setTitle(R.string.actionBarTitle_stats);
                             break;
                 }
 
