@@ -13,4 +13,6 @@
     <string name="actionBarTitle_arrives">Ingresos</string>
     <string name="actionBarTitle_stats">Estadísticas</string>
     <string name="actionBarTitle_clients">Socios</string>
+    <string name="user_name1">Walter White</string>
+    <string name="user_name1_description">23 años</string>
 </resources>
